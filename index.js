@@ -79,4 +79,20 @@ const managerQuestions = [
 
 ]
 
+// Create a main function to ask user what they will want to do
+// Four options: create Manager, Engineer, or Intern, or finish creating
+// Each option needs to have a function
+    // createManager();
+        // ask for Manager info
+            // name
+            // id
+            // email
+            // officeNumber
+                // use answers to create a new Manager object using Manager class
+                    // store new Manager inside of an array
+    // createEngineer();
+    // createIntern();
+// Create generate HTML function
+    // creating HTML template
+    // writing template into a file
 
