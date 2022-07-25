@@ -1,11 +1,11 @@
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
-const generateHTML = require('./lib/generateHTML');
+const generateHTML = require('./src/generateHTML');
 
-const inquirer = require('inquirer');
+const inquirer = require("inquirer");
+const fs = require("fs");
 const path = require('path');
-const fs = require('fs');
 
 let responses = [];
 
@@ -102,13 +102,11 @@ const init = () => {
       const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNum);
       responses.push(manager);
       console.log(responses);
-      //push to team array (manager parameter)
-      //call function to create new team member
       nextPerson();
     })
   }
   
-  const chooseNext = () => {
+  const nextPerson = () => {
     inquirer.prompt(chooseNext)
     .then(answers => {
       //choice = engineer, run engineer function
@@ -117,7 +115,7 @@ const init = () => {
       } else if (answers.choice === 'Intern') {
         makeIntern();
       } else {
-        generateHTML(responses);
+        endTeam();
       }
     })
   }
@@ -128,9 +126,7 @@ const init = () => {
       const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
       responses.push(engineer);
       console.log(responses);
-      //push to team array (engineer parameter)
-      //call function to create new team member
-      chooseNext();
+      nextPerson();
     })
   }
   
@@ -141,15 +137,24 @@ const init = () => {
       const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
       responses.push(intern);
       console.log(responses);
-      //push to team array (engineer parameter)
-      //call function to create new team member
-      chooseNext();
+      nextPerson();
     })
   }
     
-     
 
-// Create generate HTML function
+// Create generate HTML function using fs
+function writeToFile(fileName, data) {
+  return fs.writeFileSync(path.join(__dirname, fileName), data);
+}
+
+function endTeam(){
+  const html = generateHTML(responses);
+  writeToFile("./dist/index.html", html);
+  console.log("Finished!");
+}
+
+
     // creating HTML template
     // writing template into a file
 
+init();

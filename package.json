@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/BrianLalli/Team-Profile-Generator#readme",
   "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^7.0.0",
     "jest": "^28.1.3"
   }
 }
