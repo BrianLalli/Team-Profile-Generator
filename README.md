@@ -11,7 +11,7 @@ The task for this challenge was to create a command-line application that dynami
 
 ## How It Works
 First, user runs node index.js in the Integrated Terminal.
-![Demo](https://drive.google.com/file/d/1H8wlRMZxebByQic1fPGLis8ZkPn7zw2p/view)
+* [Demo](https://drive.google.com/file/d/1H8wlRMZxebByQic1fPGLis8ZkPn7zw2p/view)
 
 
 <br>
