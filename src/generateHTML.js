@@ -34,6 +34,7 @@ function generateCard (employee){
     }
     return ` <div class="card m-2" style="width: 18rem;">
     <ul class="list-group list-group-flush">
+      <li class="list-group-item">Role ${employee.getRole()}</li>
       <li class="list-group-item">Name ${employee.getName()}</li>
       <li class="list-group-item">ID ${employee.getID()}</li>
       <li class="list-group-item">Email ${employee.getEmail()}</li>
