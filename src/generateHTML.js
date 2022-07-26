@@ -9,6 +9,9 @@ function generateHTML(responses){
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     </head>
     <body>
+        <div class="d-flex m-2 justify-content-center">
+            <h1>My Team</h1>
+        </div>
         <div class="d-flex justify-content-center">
         ${
             responses.map(function(employee){
