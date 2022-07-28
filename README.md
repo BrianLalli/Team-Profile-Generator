@@ -13,7 +13,7 @@ The task for this challenge was to create a command-line application that dynami
 First, user runs node index.js in the Integrated Terminal.
 * [Demo](https://drive.google.com/file/d/1Swo9cV7wSfbTsDe7GlR2i436-waV3pGM/view?usp=sharing)
 
-Then, open the index.html file located inside the dist folder.
+Then, open the index.html file located inside the root folder.
 
 
 <br>
